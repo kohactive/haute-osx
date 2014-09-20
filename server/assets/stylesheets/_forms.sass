@@ -1,0 +1,66 @@
+.form-group
+  position: relative
+  width: 75%
+  height: 50px
+  margin: 0 auto
+  margin-bottom: 20px
+
+  input,
+  button
+    width: 100%
+    height: 100%
+    border-radius: 3px
+    border: 0
+    box-shadow: 2px 2px 0 rgba(black, 0.2)
+    font-size: 18px
+    cursor: pointer
+    +transition(background)
+
+  input
+    padding-right: 20px
+    padding-left: 55px
+
+    &:hover
+      background: #EEE
+
+  button
+    outline: none
+    background-color: #6698cb
+    color: white
+    font-size: 22px
+    font-weight: 500
+    text-shadow: 1px 1px 0 #103550
+
+    &:hover
+      background-color: $blue
+
+.stylesheets-location-container,
+.variables-location-container
+  position: relative
+  float: left
+  width: 48%
+  height: 100%
+
+  input
+    text-align: left
+    direction: rtl
+
+.variables-location-container
+  float: right
+
+.output-location-container,
+.variables-location-container
+  &:before
+    content: ""
+    position: absolute
+    top: 11px
+    left: 13px
+    width: 32px
+    height: 25px
+    background-image: url(../images/icon-output-location.svg)
+    background-repeat: no-repeat
+    opacity: 0.6
+
+.variables-location-container:before
+  top: 13px
+  background-image: url(../images/icon-variables-location.svg)

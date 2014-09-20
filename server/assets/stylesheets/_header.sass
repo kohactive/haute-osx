@@ -1,0 +1,58 @@
+$header-height        : 75px
+$text-gray            : #585858
+
+header
+  position: relative
+  height: $header-height
+  background-color: rgba(#d5d3d5, 0.8)
+
+  .btn-add-project
+    position: absolute
+    top: 0
+    right: 0
+    padding: 11px
+    border: 0
+    background: none
+    font-size: 35px
+    color: white
+    cursor: pointer
+    text-shadow: 0 0 7px rgba(black, 0.6)
+
+  .project-selector
+    text-align: center
+
+  h1
+    display: inline-block
+    margin: 0
+    color: $text-gray
+    font-size: 32px
+    font-weight: 600
+    line-height: $header-height
+
+  .btn-project-selector
+    position: relative
+    top: -7px
+    display: inline-block
+    margin: 0
+    padding: 10px
+    outline: none
+    border: 0
+    background: none
+    cursor: pointer
+    +transition
+
+    &.projects-selector-open,
+    &:hover
+      .arrow
+        border-color: #376c9b transparent transparent transparent
+    
+    .arrow
+      width: 0
+      height: 0
+      border-style: solid
+      border-width: 7px 7px 0 7px
+      border-color: $text-gray transparent transparent transparent
+
+
+  select
+    display: none

@@ -1,12 +1,29 @@
 !!!
 %html
   %head
-    %title
-    %script{:src => "assets/app.js"}
-    %link{:href => "assets/app.css", :rel => "stylesheet"}
+    %title Haute
+    %script{src: "assets/app.js"}
+    %link{href: "assets/app.css", rel: "stylesheet"}
+  
   %body
-    .wrap
-      %h1 Haute
-      %input#variables{:placeholder => "Variables Location", :type => "text"}/
-      %button#browse ...
-      %button Build
+    
+    %header.project-title-container
+      .project-selector
+        %h1
+        %button.btn-project-selector
+          .arrow
+
+        .project-selector-projects
+          .project-selector-heading Projects
+          %ul
+      
+      %button#add-project.btn-add-project +
+
+    %nav
+      %ul.row
+        %li.nav-active{data: { href: "project" }} Project
+        %li{data: { href: "blocks" }} Blocks
+        -# %li.btn-add-tab +
+
+    .content
+      = haml :project

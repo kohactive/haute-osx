@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>73DBBEF2-8126-4D5E-BAE9-030EC4B0EA8F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>haute-osx</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>0C3F6982-1A49-4CF2-B13A-C3A9D8973F09</key>
+		<string>ssh://github.com/andimal/haute-osx.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>haute-osx.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>0C3F6982-1A49-4CF2-B13A-C3A9D8973F09</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/andimal/haute-osx.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>0C3F6982-1A49-4CF2-B13A-C3A9D8973F09</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>0C3F6982-1A49-4CF2-B13A-C3A9D8973F09</string>
+			<key>IDESourceControlWCCName</key>
+			<string>haute-osx</string>
+		</dict>
+	</array>
+</dict>
+</plist>

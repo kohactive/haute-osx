@@ -13,14 +13,13 @@ gem 'rake', '10.0.3'
 
 # sinatra
 gem 'sinatra', '1.4.5'
+gem 'sinatra-asset-pipeline'
 gem 'sinatra-contrib', '1.4.2'
 gem 'sinatra-index'
 gem 'json', '1.8.0'
 
-gem 'sinatra-asset-pipeline'
-gem 'sass'
 gem 'coffee-script'
-
-# html/css/js
 gem 'haml', '4.0.0'
+gem 'kss'
+gem 'sass'
 gem 'uglifier', '1.3.0'
