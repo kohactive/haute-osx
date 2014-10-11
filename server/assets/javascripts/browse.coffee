@@ -17,11 +17,10 @@ $ ->
       route       : '/browse-for-folder'
       complete    : (paths) ->
         $_this
-          .val paths.relative_path
-          .attr 'data-absolute-path', paths.absolute_path
+          .val paths.relative_path.path
+          .attr 'data-absolute-path', paths.absolute_path.path
         
         saveProject()
-
 
   $('.js-browse-for-file').click ->
     $_this = $(this)
@@ -30,15 +29,14 @@ $ ->
       route       : '/browse'
       complete    : (paths) ->
         $_this
-          .val paths.relative_path
-          .attr 'data-absolute-path', paths.absolute_path
+          .val paths.relative_path.path
+          .attr 'data-absolute-path', paths.absolute_path.path
         
         saveProject()
 
   $('#add-project').click ->
     $_this = $(this)
-    $.post('/browse-for-folder').success (data) ->
-      
+    $.post('/browse-for-folder').success (data) ->      
       projectPath = data.path
       folderName  = data.path.trim().split('/')
 

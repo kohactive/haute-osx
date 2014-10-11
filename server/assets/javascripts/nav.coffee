@@ -3,14 +3,13 @@ $ ->
     href = $(this).data('href')
     $('.content').load href, ->
       if href == 'blocks'
-        $.post '/load-blocks',
-          id : $('.project-selector h1').attr 'data-project-id'
-        , (data) ->
-          $('.block-title').val data.block_title
-          $('.block-content').val data.block_content
+        $.get "/blocks/#{currentProject}", (blocks) ->
+          $.each blocks, ->
+            block = new Block
+            block.load this
 
       else if href == 'project'
-        projectLoadID = $('.project-selector h1').data('project-id')
+        projectLoadID = currentProject
         if projectLoadID
           loadedProject = new Project
           loadedProject.load(projectLoadID)

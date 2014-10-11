@@ -15,7 +15,8 @@
     -# = javascript_include_tag 'jquery'
   
   %body.kss-body
-    = styleguide_block @block_title, @block_content
+    - @blocks.each do |block|
+      = styleguide_block block.block_title, block.block_content
 
     %script{src: "http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"}
     %script{src: "kss.js"}

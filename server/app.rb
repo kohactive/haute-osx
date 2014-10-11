@@ -8,11 +8,12 @@ require 'json/ext'
 require 'kss'
 require 'pathname'
 require 'sass'
-require "sinatra"
-require "sinatra/base"
+require 'sinatra'
+require 'sinatra/base'
 require 'sinatra-index'
 require 'sinatra/asset_pipeline'
-require "sinatra/reloader" if development?
+require 'sinatra/reloader' if development?
+require './db'
 
 # Globals
 ORG_STRING       = "com.foo.rack-cocoa.org"
@@ -73,70 +74,78 @@ class App < Sinatra::Base
         relative_path: relative_path
       }.to_json
     else
-      { path: selected_path }.to_json
+      selected_path.to_json
     end
   end
 
-  get '/load-projects' do
+  # create project
+  post '/projects' do
     content_type :json
-    File.read(projects_file)
+    project = Project.create(title: params[:title], path: params[:path])
+    project.to_json
   end
 
-  post '/load-project' do
+  # read all projects
+  get '/projects' do
     content_type :json
-    projects = get_projects
-    id = params[:id].to_s
-    projects['projects'][id].to_json
+    Project.all.to_json
   end
 
-  post '/create-project' do
+  # read project
+  get '/projects/:id' do
     content_type :json
-
-    projects = get_projects
-
-    # increment for new project id
-    new_project_id = projects['projects'].keys.last.to_i + 1
-
-    new_project_data = {
-      id: new_project_id,
-      title: params[:title],
-      path: params[:path]
-    }
-    
-    projects['projects'][new_project_id.to_s] = new_project_data
-    write_projects(projects)
-
-    new_project_data.to_json
+    Project.find(params[:id]).to_json
   end
 
-  post '/save-project' do
-    id = params[:id].to_s
-    
-    # set up project with new data
-    project = get_project(id)
-    project['css_relative']         = params[:css_relative]
-    project['css_absolute']         = params[:css_absolute]
-    project['stylesheets_relative'] = params[:stylesheets_relative]
-    project['stylesheets_absolute'] = params[:stylesheets_absolute]
-    project['variables_relative']   = params[:variables_relative]
-    project['variables_absolute']   = params[:variables_absolute]
-    project['output_relative']      = params[:output_relative]
-    project['output_absolute']      = params[:output_absolute]
+  # update project
+  post '/projects/:id' do
+    content_type :json
 
-    projects = get_projects
-    
-    # overwrite project with new data
-    projects['projects'][id] = project
-    write_projects(projects)
-    true
+    project = Project.update( params[:id], {
+      css_relative: params[:css_relative],
+      css_absolute: params[:css_absolute],
+      stylesheets_relative: params[:stylesheets_relative],
+      stylesheets_absolute: params[:stylesheets_absolute],
+      variables_relative: params[:variables_relative],
+      variables_absolute: params[:variables_absolute],
+      output_relative: params[:output_relative],
+      output_absolute: params[:output_absolute]
+    } )
+
+    project.to_json
+  end
+
+  # create new block
+  get '/projects/:id/blocks' do
+    content_type :json
+    project = Project.find(params[:id])
+    block = project.blocks.create()
+    block.to_json  
+  end
+
+  # read a project's blocks
+  get '/blocks/:id' do
+    content_type :json
+    blocks = Project.find(params[:id]).blocks
+    blocks.to_json
+  end
+
+  # update block
+  post '/blocks/:id' do
+    content_type :json
+
+    block = Block.update( params[:id], {
+      block_title:    params[:block_title],
+      block_content:  params[:block_content]
+    } )
+
+    block.to_json
   end
 
   post '/build' do
-    id = params[:id].to_s
-    project = get_project(id)
+    project = Project.find(params[:id])
 
-    @block_title    = project['block_title']
-    @block_content  = project['block_content']
+    @blocks = project.blocks
 
     @styleguide = Kss::Parser.new(params[:stylesheet_path])
     styleguide_index = "#{params[:output_path]}/index.html"
@@ -152,29 +161,6 @@ class App < Sinatra::Base
       %x[osascript -e 'open location "file://#{styleguide_index}"']
     end
     "build complete!"
-  end
-
-  post '/save-block' do
-    id = params[:id].to_s
-    project = get_project(id)
-
-    project['block_title']    = params[:block_title]
-    project['block_content']  = params[:block_content]
-
-    projects = get_projects
-    projects['projects'][id] = project
-    write_projects(projects)
-    true
-  end
-
-  post '/load-blocks' do
-    content_type :json
-    id = params[:id].to_s
-    project = get_project(id)
-    {
-      block_title: project['block_title'],
-      block_content: project['block_content']
-    }.to_json
   end
 
   get '/version' do

@@ -18,6 +18,10 @@ gem 'sinatra-contrib', '1.4.2'
 gem 'sinatra-index'
 gem 'json', '1.8.0'
 
+# sqlite
+gem 'sqlite3'
+gem 'activerecord'
+
 gem 'coffee-script'
 gem 'haml', '4.0.0'
 gem 'kss'

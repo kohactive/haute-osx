@@ -10,12 +10,13 @@
           %li
             %strong= modifier.name
             \- #{modifier.description}
-  .styleguide-element.col-1-5
-    = Haml::Engine.new(@example_html).render
-  - @section.modifiers.each do |modifier|
-    .styleguide-element.styleguide-modifier.col-1-5
-      %span.styleguide-modifier-name= modifier.name
-      - subbed_html = @example_html.gsub('$modifier_class', modifier.class_name)
-      = Haml::Engine.new(subbed_html).render
+  .row
+    .styleguide-element.col-1-5
+      = Haml::Engine.new(@example_html).render
+    - @section.modifiers.each do |modifier|
+      .styleguide-element.styleguide-modifier.col-1-5
+        %span.styleguide-modifier-name= modifier.name
+        - subbed_html = @example_html.gsub('$modifier_class', modifier.class_name)
+        = Haml::Engine.new(subbed_html).render
   -# .styleguide-html
   -#   %pre.styleguide-code= @escaped_html

@@ -19,11 +19,16 @@
       
       %button#add-project.btn-add-project +
 
-    %nav
-      %ul.row
-        %li.nav-active{data: { href: "project" }} Project
-        %li{data: { href: "blocks" }} Blocks
-        -# %li.btn-add-tab +
+    .row.relative
+      %nav
+        %ul.row
+          %li.nav-active{data: { href: "project" }} Project
+          %li{data: { href: "template" }} Template
+          %li{data: { href: "blocks" }} Blocks
+          %li{data: { href: "typography" }} Typography
+        
+        .build-project-container.form-group
+          %button.build-project Build!
 
-    .content
-      = haml :project
+      .content
+        = haml :project

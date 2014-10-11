@@ -1,9 +1,11 @@
+window.currentProject = 0
+
 class window.Project
 
   create : (params) ->
     _this = this
 
-    $.post '/create-project',
+    $.post '/projects',
       title : params.title
       path  : params.path
     , (data) ->
@@ -21,20 +23,18 @@ class window.Project
   load : (id) ->
     _this = this
     
-    $.post '/load-project',
-      id : id
-    , (data) ->
-      _this.id                  = data.id
-      _this.title               = data.title
-      _this.path                = data.path
-      _this.cssRelative         = data.css_relative
-      _this.cssAbsolute         = data.css_absolute
-      _this.stylesheetsRelative = data.stylesheets_relative
-      _this.stylesheetsAbsolute = data.stylesheets_absolute
-      _this.variablesRelative   = data.variables_relative
-      _this.variablesAbsolute   = data.variables_absolute
-      _this.outputRelative      = data.output_relative
-      _this.outputAbsolute      = data.output_absolute
+    $.get "/projects/#{id}", (project) ->
+      _this.id                  = project.id
+      _this.title               = project.title
+      _this.path                = project.path
+      _this.cssRelative         = project.css_relative
+      _this.cssAbsolute         = project.css_absolute
+      _this.stylesheetsRelative = project.stylesheets_relative
+      _this.stylesheetsAbsolute = project.stylesheets_absolute
+      _this.variablesRelative   = project.variables_relative
+      _this.variablesAbsolute   = project.variables_absolute
+      _this.outputRelative      = project.output_relative
+      _this.outputAbsolute      = project.output_absolute
 
       _this.show()
 
@@ -63,25 +63,26 @@ class window.Project
       .val this.outputRelative
       .attr 'data-absolute-path', this.outputAbsolute
 
+    window.currentProject = this.id
+
 window.updateProjectSelector = (params = '') ->
   # populates the project selector with projects
   # takes params.complete for callback
-  $.get '/load-projects', (data) ->
+  $.get '/projects', (projects) ->
     projectSelector = '.project-selector-projects ul'
     $(projectSelector).html('')
-    $.each data.projects, (k,v) ->
+    $.each projects, ->
       $('<li/>',
-        'data-id'   : v.id
-        'data-path' : v.path
-        text        : v.title
+        'data-id'   : this.id
+        'data-path' : this.path
+        text        : this.title
       ).appendTo projectSelector
 
     if params.complete
       params.complete()
 
 window.saveProject = ->
-  $.post '/save-project',
-    id                    : $('.project-selector h1').attr 'data-project-id'
+  $.post "/projects/#{currentProject}",
     css_relative          : $('.compiled-css-location').val()
     css_absolute          : $('.compiled-css-location').attr('data-absolute-path')
     stylesheets_relative  : $('.stylesheets-location').val()
@@ -100,7 +101,7 @@ remove_project_selector = ->
 
 $(document).on 'click', '.build-project', ->
   $.post '/build',
-    id              : $('.project-selector h1').attr 'data-project-id'
+    id              : currentProject
     stylesheet_path : $('.stylesheets-location').attr 'data-absolute-path'
     output_path     : $('.output-location').attr 'data-absolute-path'
   , (data) ->
