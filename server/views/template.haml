@@ -1,0 +1,10 @@
+#template-editor.js-template-page
+
+:javascript
+  var editor = ace.edit("template-editor");
+  editor.setTheme("ace/theme/tomorrow_night_eighties");
+  editor.getSession().setMode("ace/mode/haml");
+  editor.getSession().setTabSize(2);
+  editor.getSession().on('change', function(e) {
+    templateEditorChange();
+  });

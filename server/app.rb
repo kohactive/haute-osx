@@ -42,6 +42,10 @@ class App < Sinatra::Base
     haml :project
   end
 
+  get '/template' do
+    haml :template
+  end
+
   get '/blocks' do
     haml :blocks
   end
@@ -81,7 +85,8 @@ class App < Sinatra::Base
   # create project
   post '/projects' do
     content_type :json
-    project = Project.create(title: params[:title], path: params[:path])
+    default_page_template = File.read("#{File.expand_path("../", __FILE__)}/views/styleguide.haml")
+    project = Project.create(title: params[:title], path: params[:path], page_template: default_page_template)
     project.to_json
   end
 
@@ -101,17 +106,19 @@ class App < Sinatra::Base
   post '/projects/:id' do
     content_type :json
 
-    project = Project.update( params[:id], {
-      css_relative: params[:css_relative],
-      css_absolute: params[:css_absolute],
-      stylesheets_relative: params[:stylesheets_relative],
-      stylesheets_absolute: params[:stylesheets_absolute],
-      variables_relative: params[:variables_relative],
-      variables_absolute: params[:variables_absolute],
-      output_relative: params[:output_relative],
-      output_absolute: params[:output_absolute]
-    } )
+    project = Project.find( params[:id] )
 
+    project.css_relative          = params[:css_relative] if params[:css_relative]
+    project.css_absolute          = params[:css_absolute] if params[:css_absolute]
+    project.stylesheets_relative  = params[:stylesheets_relative] if params[:stylesheets_relative]
+    project.stylesheets_absolute  = params[:stylesheets_absolute] if params[:stylesheets_absolute]
+    project.variables_relative    = params[:variables_relative] if params[:variables_relative]
+    project.variables_absolute    = params[:variables_absolute] if params[:variables_absolute]
+    project.output_relative       = params[:output_relative] if params[:output_relative]
+    project.output_absolute       = params[:output_absolute] if params[:output_absolute]
+    project.page_template         = params[:page_template] if params[:page_template]
+
+    project.save()
     project.to_json
   end
 
@@ -147,14 +154,14 @@ class App < Sinatra::Base
 
     @blocks = project.blocks
 
-    @styleguide = Kss::Parser.new(params[:stylesheet_path])
-    styleguide_index = "#{params[:output_path]}/index.html"
+    @styleguide = Kss::Parser.new( project.stylesheets_absolute )
+    styleguide_index = "#{project.output_absolute}/index.html"
     File.open( styleguide_index, 'w+' ) do |f|
-      f.write(haml :styleguide)
+      f.write(haml project.page_template)
 
       # copy and rename the compiled css file
       # into the output directory
-      FileUtils.cp project['css_absolute'], "#{params[:output_path]}/project.css"
+      FileUtils.cp project.css_absolute, "#{project.output_absolute}/project.css"
       
       # potential problem in desktop app:
       # does it open in a new window?
@@ -195,29 +202,6 @@ class App < Sinatra::Base
       @_out_buf
     ensure
       @_out_buf = out
-    end
-  end
-
-  private
-
-  def projects_file
-    "#{File.expand_path("../", __FILE__)}/public/js/projects.json"
-  end
-
-  def get_projects
-    # get all projects and convert to hash
-    JSON.parse( File.read(projects_file) )
-  end
-
-  def get_project(id)
-    get_projects['projects'][id.to_s]
-  end
-
-  def write_projects(projects)
-    # takes `projects` as a hash
-    # overwrites projects json
-    File.open( projects_file, 'w+' ) do |f|
-      f.write(projects.to_json)
     end
   end
 

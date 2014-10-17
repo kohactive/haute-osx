@@ -20,7 +20,7 @@ class window.Project
         complete : ->
           _this.show()
 
-  load : (id) ->
+  load : (id, complete='') ->
     _this = this
     
     $.get "/projects/#{id}", (project) ->
@@ -35,35 +35,50 @@ class window.Project
       _this.variablesAbsolute   = project.variables_absolute
       _this.outputRelative      = project.output_relative
       _this.outputAbsolute      = project.output_absolute
+      _this.pageTemplate        = project.page_template
 
       _this.show()
 
+      complete() if $.isFunction(complete)
+
   show : ->
-    # reset inputs
-    $('input').val('')
     $('.project-selector h1')
       .text this.title
       .attr
         'data-project-path' : this.path
         'data-project-id'   : this.id
-    
-    $('.compiled-css-location')
-      .val this.cssRelative
-      .attr 'data-absolute-path', this.cssAbsolute
-
-    $('.stylesheets-location')
-      .val this.stylesheetsRelative
-      .attr 'data-absolute-path', this.stylesheetsAbsolute
-
-    $('.variables-location')
-      .val this.variablesRelative
-      .attr 'data-absolute-path', this.variablesAbsolute
-
-    $('.output-location')
-      .val this.outputRelative
-      .attr 'data-absolute-path', this.outputAbsolute
 
     window.currentProject = this.id
+    
+    if $('.js-project-page').length
+      # reset inputs
+      $('input').val('')
+
+      $('.compiled-css-location')
+        .val this.cssRelative
+        .attr 'data-absolute-path', this.cssAbsolute
+
+      $('.stylesheets-location')
+        .val this.stylesheetsRelative
+        .attr 'data-absolute-path', this.stylesheetsAbsolute
+
+      $('.variables-location')
+        .val this.variablesRelative
+        .attr 'data-absolute-path', this.variablesAbsolute
+
+      $('.output-location')
+        .val this.outputRelative
+        .attr 'data-absolute-path', this.outputAbsolute
+
+    else if $('.js-template-page').length
+      editor.setValue this.pageTemplate
+
+    else if $('.js-blocks-page').length
+      $('.js-blocks-page .blocks').html('')
+      $.get "/blocks/#{currentProject}", (blocks) ->
+        $.each blocks, ->
+          block = new Block
+          block.load this
 
 window.updateProjectSelector = (params = '') ->
   # populates the project selector with projects
@@ -108,31 +123,34 @@ $(document).on 'click', '.build-project', ->
     console.log data
 
 $(document).on 'click', '.project-selector-projects li', ->
+  $_this = $(this)
+
   # load the selected project's data to the ui
-  projectLoadID = $(this).data('id')
-  if projectLoadID
-    loadedProject = new Project
-    loadedProject.load(projectLoadID)
-    remove_project_selector()
-    $('.project-selector-active').removeClass('project-selector-active')
-    $(this).addClass('project-selector-active')
+  $('.content').load 'project', ->
+    projectLoadID = $_this.data('id')
+    if projectLoadID
+      loadedProject = new Project
+      loadedProject.load projectLoadID
+      remove_project_selector()
+      $('.project-selector-active').removeClass 'project-selector-active'
+      $(this).addClass 'project-selector-active'
+
+$(document).on 'click', '.btn-project-selector', ->
+  if !$(this).hasClass('projects-selector-open')
+    $('.project-selector-projects')
+      .css
+        left : ( $('.btn-project-selector .arrow').offset().left + ( $('.btn-project-selector .arrow').outerWidth() / 2 ) ) - ( $('.project-selector-projects').outerWidth() / 2 )
+      .fadeIn()
+    
+    $(this).addClass('projects-selector-open')
+
+    $('body').append '<div class="transparent-overlay"></div>'
+
+    $('.transparent-overlay').click ->
+      remove_project_selector()
 
 $ ->
   updateProjectSelector
     complete : ->
       # show first project data on load
       $('.project-selector-projects li:first').click()
-
-  $('.btn-project-selector').click ->
-    if !$(this).hasClass('projects-selector-open')
-      $('.project-selector-projects')
-        .css
-          left : ( $('.btn-project-selector .arrow').offset().left + ( $('.btn-project-selector .arrow').outerWidth() / 2 ) ) - ( $('.project-selector-projects').outerWidth() / 2 )
-        .fadeIn()
-      
-      $(this).addClass('projects-selector-open')
-
-      $('body').append '<div class="transparent-overlay"></div>'
-
-      $('.transparent-overlay').click ->
-        remove_project_selector()

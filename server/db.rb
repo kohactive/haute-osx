@@ -21,6 +21,7 @@ ActiveRecord::Schema.define do
       table.column :variables_absolute,   :string
       table.column :output_relative,      :string
       table.column :output_absolute,      :string
+      table.column :page_template,        :blob
     end
   end
 
