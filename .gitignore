@@ -2,3 +2,4 @@
 .sass-cache/
 database.log
 *.db
+bundle/

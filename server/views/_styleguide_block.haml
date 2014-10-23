@@ -1,7 +1,7 @@
 .styleguide-example
-  %h3
+  %h3.styleguide-section-header
     = @section.section
-    %em= @section.filename
+    -# %em= @section.filename
   .styleguide-description
     %p= @section.description
     - if @section.modifiers.any?
@@ -10,9 +10,10 @@
           %li
             %strong= modifier.name
             \- #{modifier.description}
-  .row
+  .row.no-margin
     .styleguide-element.col-1-5
       = Haml::Engine.new(@example_html).render
+
     - @section.modifiers.each do |modifier|
       .styleguide-element.styleguide-modifier.col-1-5
         %span.styleguide-modifier-name= modifier.name

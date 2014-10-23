@@ -32,6 +32,10 @@ NSString *const URL  = @"http://127.0.0.1:9999";
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
+    
+    NSColor *color = [NSColor colorWithDeviceRed:0 green:0 blue:0 alpha:0.4];
+    [_window setOpaque:NO];
+    [_window setBackgroundColor:color];
   
   [_progress startAnimation:self];
   [_webview setDrawsBackground:NO];
