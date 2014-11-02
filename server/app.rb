@@ -6,6 +6,7 @@ require 'coffee-script'
 require 'haml'
 require 'json/ext'
 require 'kss'
+require 'haute'
 require 'pathname'
 require 'sass'
 require 'sinatra'
@@ -122,6 +123,14 @@ class App < Sinatra::Base
     project.to_json
   end
 
+  # delete project
+  delete '/projects/:id' do
+    content_type :json
+    project = Project.find( params[:id] )
+    project.destroy
+    "project deleted".to_json
+  end
+
   # create new block
   get '/projects/:id/blocks' do
     content_type :json
@@ -149,10 +158,20 @@ class App < Sinatra::Base
     block.to_json
   end
 
+  # delete block
+  delete '/blocks/:id' do
+    content_type :json
+    block = Block.find( params[:id] )
+    block.destroy
+    "block deleted".to_json
+  end
+
   post '/build' do
     project = Project.find(params[:id])
 
-    @blocks = project.blocks
+    @blocks     = project.blocks
+    @colors     = Haute::Generator.generate( Haute::Parser.parse_file(project.variables_absolute) )
+    @typography = haml :_typography_block
 
     @styleguide = Kss::Parser.new( project.stylesheets_absolute )
     styleguide_index = "#{project.output_absolute}/index.html"
@@ -165,7 +184,7 @@ class App < Sinatra::Base
       
       # potential problem in desktop app:
       # does it open in a new window?
-      %x[osascript -e 'open location "file://#{styleguide_index}"']
+      # %x[osascript -e 'open location "file://#{styleguide_index}"']
     end
     "build complete!"
   end

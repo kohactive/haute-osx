@@ -24,6 +24,9 @@ GEM
     execjs (2.2.1)
     haml (4.0.0)
       tilt
+    haute (0.2.1)
+      haml (~> 4.0.0)
+      kss (~> 0.5.0)
     hike (1.2.3)
     i18n (0.6.11)
     json (1.8.0)
@@ -84,8 +87,8 @@ DEPENDENCIES
   activerecord
   coffee-script
   haml (= 4.0.0)
+  haute (~> 0.2.1)
   json (= 1.8.0)
-  kss
   rack (= 1.5.2)
   rake (= 10.0.3)
   sass

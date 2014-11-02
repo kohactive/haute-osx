@@ -35,7 +35,9 @@
       background-color: $blue
 
 .output-location-container,
-.variables-location-container
+.variables-location-container,
+.compiled-css-location-container,
+.stylesheets-location-container
   &:before
     content: ""
     position: absolute
@@ -45,8 +47,15 @@
     height: 25px
     background-image: url(../images/icon-output-location.svg)
     background-repeat: no-repeat
+    background-size: 100% 100%
     opacity: 0.6
 
 .variables-location-container:before
   top: 13px
   background-image: url(../images/icon-variables-location.svg)
+
+.compiled-css-location-container:before
+  background-image: url(../images/icon-css.svg)
+
+.stylesheets-location-container:before
+  background-image: url(../images/icon-sass.svg)

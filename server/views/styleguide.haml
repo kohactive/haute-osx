@@ -11,9 +11,14 @@
     %link{href: "project.css", rel: "stylesheet"}
   
   %body.kss-body
+    %h1.kss-heading New Style Guide
+
+    = @colors
+
+    = @typography
+
     - @blocks.each do |block|
       = styleguide_block block.block_title, block.block_content
 
     %script{src: "http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"}
     %script{src: "kss.js"}
-    -# = javascript_include_tag 'rainbow'

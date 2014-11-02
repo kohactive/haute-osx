@@ -87,11 +87,8 @@ window.updateProjectSelector = (params = '') ->
     projectSelector = '.project-selector-projects ul'
     $(projectSelector).html('')
     $.each projects, ->
-      $('<li/>',
-        'data-id'   : this.id
-        'data-path' : this.path
-        text        : this.title
-      ).appendTo projectSelector
+      $("<li data-id='#{this.id}' data-path='#{this.path}'>#{this.title}<button class='btn-delete'>x</button></li>")
+        .appendTo projectSelector
 
     if params.complete
       params.complete()
@@ -148,6 +145,20 @@ $(document).on 'click', '.btn-project-selector', ->
 
     $('.transparent-overlay').click ->
       remove_project_selector()
+
+$(document).on 'click', '.project-selector-projects .btn-delete', (e) ->
+  $_this = $(this)
+  $parentLI = $(this).closest('li')
+  e.stopPropagation()
+  
+  confirmResponse = confirm 'Delete project?'
+  if confirmResponse
+    $.ajax
+      url: "/projects/#{$parentLI.data('id')}"
+      type: "DELETE"
+      success: (result) ->
+        console.log result
+        $parentLI.fadeOut()
 
 $ ->
   updateProjectSelector

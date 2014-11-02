@@ -24,6 +24,6 @@ gem 'activerecord'
 
 gem 'coffee-script'
 gem 'haml', '4.0.0'
-gem 'kss'
+gem 'haute', '~> 0.2.1'
 gem 'sass'
 gem 'uglifier', '1.3.0'
