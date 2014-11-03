@@ -1,4 +1,5 @@
 $blue         : #376c9b
+$orange       : #FFB361
 
 nav
   position: absolute
@@ -13,18 +14,26 @@ nav
     list-style: none
 
   li
-    padding: 5px 20px
+    padding: 5px 0 5px 20px
+    border-right: 6px solid transparent
     color: #CCC
     +transition
 
     &:hover:not(.nav-active)
       cursor: pointer
 
-  // li:hover,
-  // .nav-active
-  //   border-color: $blue
-  //   background-color: rgba(white, 0.8)
-  //   color: $blue
+    &:hover,
+    &.nav-active
+      border-color: $orange
+      color: $orange
+
+  h5
+    display: none
+    position: absolute
+    width: 100%
+    bottom: 60px
+    color: $blue
+    text-align: center
 
   .build-project-container
     position: absolute

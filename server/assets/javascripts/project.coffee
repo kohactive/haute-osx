@@ -49,8 +49,11 @@ class window.Project
         'data-project-id'   : this.id
 
     window.currentProject = this.id
-    
+
     if $('.js-project-page').length
+      $('.nav-active').removeClass('nav-active')
+      $('nav li:first').addClass('nav-active')
+
       # reset inputs
       $('input').val('')
 
@@ -117,7 +120,11 @@ $(document).on 'click', '.build-project', ->
     stylesheet_path : $('.stylesheets-location').attr 'data-absolute-path'
     output_path     : $('.output-location').attr 'data-absolute-path'
   , (data) ->
-    console.log data
+    $('.js-build-complete').stop().fadeIn ->
+      $_this = $(this)
+      setTimeout ->
+        $_this.stop().fadeOut()
+      , 1000
 
 $(document).on 'click', '.project-selector-projects li', ->
   $_this = $(this)
