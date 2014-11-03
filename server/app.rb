@@ -181,6 +181,12 @@ class App < Sinatra::Base
       # copy and rename the compiled css file
       # into the output directory
       FileUtils.cp project.css_absolute, "#{project.output_absolute}/project.css"
+
+      # copy over other necessary assets
+      public_folder = "#{File.expand_path("../", __FILE__)}/public"
+      FileUtils.cp "#{public_folder}/css/kss.css", "#{project.output_absolute}/kss.css"
+      FileUtils.cp "#{public_folder}/js/jquery.js", "#{project.output_absolute}/jquery.js"
+      FileUtils.cp "#{public_folder}/js/kss.js", "#{project.output_absolute}/kss.js"
       
       # potential problem in desktop app:
       # does it open in a new window?

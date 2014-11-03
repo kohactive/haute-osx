@@ -19,5 +19,6 @@
         %span.styleguide-modifier-name= modifier.name
         - subbed_html = @example_html.gsub('$modifier_class', modifier.class_name)
         = Haml::Engine.new(subbed_html).render
-  -# .styleguide-html
-  -#   %pre.styleguide-code= @escaped_html
+  
+  .styleguide-html
+    %pre.styleguide-code= @example_html
