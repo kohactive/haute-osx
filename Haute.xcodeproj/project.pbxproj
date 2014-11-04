@@ -46,22 +46,22 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		D329FE381808668400A30E94 /* haute-osx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "haute-osx.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D329FE3C1808668400A30E94 /* haute-osx-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "haute-osx-Info.plist"; sourceTree = "<group>"; };
+		D329FE381808668400A30E94 /* Haute.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Haute.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D329FE3C1808668400A30E94 /* Haute-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Haute-Info.plist"; sourceTree = "<group>"; };
 		D329FE3E1808668400A30E94 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D329FE401808668400A30E94 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D329FE421808668400A30E94 /* haute-osx-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "haute-osx-Prefix.pch"; sourceTree = "<group>"; };
+		D329FE421808668400A30E94 /* Haute-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Haute-Prefix.pch"; sourceTree = "<group>"; };
 		D329FE441808668400A30E94 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		D329FE461808668400A30E94 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D329FE471808668400A30E94 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D329FE4A1808668400A30E94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		D329FE521808668400A30E94 /* haute-osxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "haute-osxTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D329FE521808668400A30E94 /* HauteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HauteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D329FE6918086A7400A30E94 /* server */ = {isa = PBXFileReference; lastKnownFileType = folder; path = server; sourceTree = "<group>"; };
 		D329FE6B18086A8500A30E94 /* scripts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = scripts; sourceTree = "<group>"; };
 		D329FE6D18086BC900A30E94 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/WebKit.framework; sourceTree = DEVELOPER_DIR; };
 		D3390F8615DB74AF005DCB78 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		D3752001163E0A100004E31D /* app_icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = app_icon.icns; sourceTree = "<group>"; };
-		D37DD39E15D94AC9008A95DE /* haute-osx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "haute-osx.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D37DD39E15D94AC9008A95DE /* Haute.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Haute.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D37DD3A215D94AC9008A95DE /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		D37DD3A515D94AC9008A95DE /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		D37DD3A615D94AC9008A95DE /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -112,10 +112,10 @@
 		D329FE3B1808668400A30E94 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				D329FE3C1808668400A30E94 /* haute-osx-Info.plist */,
+				D329FE3C1808668400A30E94 /* Haute-Info.plist */,
 				D329FE3D1808668400A30E94 /* InfoPlist.strings */,
 				D329FE401808668400A30E94 /* main.m */,
-				D329FE421808668400A30E94 /* haute-osx-Prefix.pch */,
+				D329FE421808668400A30E94 /* Haute-Prefix.pch */,
 				D329FE431808668400A30E94 /* Credits.rtf */,
 			);
 			name = "Supporting Files";
@@ -136,9 +136,9 @@
 		D37DD39F15D94AC9008A95DE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D37DD39E15D94AC9008A95DE /* haute-osx.app */,
-				D329FE381808668400A30E94 /* haute-osx.app */,
-				D329FE521808668400A30E94 /* haute-osxTests.xctest */,
+				D37DD39E15D94AC9008A95DE /* Haute.app */,
+				D329FE381808668400A30E94 /* Haute.app */,
+				D329FE521808668400A30E94 /* HauteTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -167,9 +167,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D329FE371808668400A30E94 /* haute-osx */ = {
+		D329FE371808668400A30E94 /* Haute */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D329FE601808668500A30E94 /* Build configuration list for PBXNativeTarget "haute-osx" */;
+			buildConfigurationList = D329FE601808668500A30E94 /* Build configuration list for PBXNativeTarget "Haute" */;
 			buildPhases = (
 				D329FE341808668400A30E94 /* Sources */,
 				D329FE351808668400A30E94 /* Frameworks */,
@@ -179,14 +179,14 @@
 			);
 			dependencies = (
 			);
-			name = "haute-osx";
+			name = Haute;
 			productName = "cocoa-rack";
-			productReference = D329FE381808668400A30E94 /* haute-osx.app */;
+			productReference = D329FE381808668400A30E94 /* Haute.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D329FE511808668400A30E94 /* haute-osxTests */ = {
+		D329FE511808668400A30E94 /* HauteTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D329FE631808668500A30E94 /* Build configuration list for PBXNativeTarget "haute-osxTests" */;
+			buildConfigurationList = D329FE631808668500A30E94 /* Build configuration list for PBXNativeTarget "HauteTests" */;
 			buildPhases = (
 				D329FE4E1808668400A30E94 /* Sources */,
 				D329FE4F1808668400A30E94 /* Frameworks */,
@@ -197,9 +197,9 @@
 			dependencies = (
 				D329FE571808668400A30E94 /* PBXTargetDependency */,
 			);
-			name = "haute-osxTests";
+			name = HauteTests;
 			productName = "cocoa-rackTests";
-			productReference = D329FE521808668400A30E94 /* haute-osxTests.xctest */;
+			productReference = D329FE521808668400A30E94 /* HauteTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		D37DD39D15D94AC9008A95DE /* FontPrep */ = {
@@ -217,7 +217,7 @@
 			);
 			name = FontPrep;
 			productName = fontx;
-			productReference = D37DD39E15D94AC9008A95DE /* haute-osx.app */;
+			productReference = D37DD39E15D94AC9008A95DE /* Haute.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -234,7 +234,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D37DD39815D94AC9008A95DE /* Build configuration list for PBXProject "haute-osx" */;
+			buildConfigurationList = D37DD39815D94AC9008A95DE /* Build configuration list for PBXProject "Haute" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -248,8 +248,8 @@
 			projectRoot = "";
 			targets = (
 				D37DD39D15D94AC9008A95DE /* FontPrep */,
-				D329FE371808668400A30E94 /* haute-osx */,
-				D329FE511808668400A30E94 /* haute-osxTests */,
+				D329FE371808668400A30E94 /* Haute */,
+				D329FE511808668400A30E94 /* HauteTests */,
 			);
 		};
 /* End PBXProject section */
@@ -314,7 +314,7 @@
 /* Begin PBXTargetDependency section */
 		D329FE571808668400A30E94 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D329FE371808668400A30E94 /* haute-osx */;
+			target = D329FE371808668400A30E94 /* Haute */;
 			targetProxy = D329FE561808668400A30E94 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -358,8 +358,9 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 0.1.0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "cocoa-rack/haute-osx-Prefix.pch";
+				GCC_PREFIX_HEADER = "cocoa-rack/Haute-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -367,9 +368,9 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
-				INFOPLIST_FILE = "cocoa-rack/haute-osx-Info.plist";
+				INFOPLIST_FILE = "cocoa-rack/Haute-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				PRODUCT_NAME = "haute-osx";
+				PRODUCT_NAME = Haute;
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
 			};
@@ -386,15 +387,16 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 0.1.0;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "cocoa-rack/haute-osx-Prefix.pch";
+				GCC_PREFIX_HEADER = "cocoa-rack/Haute-Prefix.pch";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
-				INFOPLIST_FILE = "cocoa-rack/haute-osx-Info.plist";
+				INFOPLIST_FILE = "cocoa-rack/Haute-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				PRODUCT_NAME = "haute-osx";
+				PRODUCT_NAME = Haute;
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
 			};
@@ -427,7 +429,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				INFOPLIST_FILE = "cocoa-rackTests/cocoa-rackTests-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				PRODUCT_NAME = "haute-osxTests";
+				PRODUCT_NAME = HauteTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -457,7 +459,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				INFOPLIST_FILE = "cocoa-rackTests/cocoa-rackTests-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				PRODUCT_NAME = "haute-osxTests";
+				PRODUCT_NAME = HauteTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -488,7 +490,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_NAME = FontPrep;
+				PRODUCT_NAME = Haute;
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -511,7 +513,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				PRODUCT_NAME = FontPrep;
+				PRODUCT_NAME = Haute;
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -531,7 +533,7 @@
 				GCC_PREFIX_HEADER = "fontx/FontPrep-Prefix.pch";
 				INFOPLIST_FILE = "fontx/FontPrep-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				PRODUCT_NAME = "haute-osx";
+				PRODUCT_NAME = Haute;
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
 			};
@@ -552,7 +554,7 @@
 				GCC_PREFIX_HEADER = "fontx/FontPrep-Prefix.pch";
 				INFOPLIST_FILE = "fontx/FontPrep-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				PRODUCT_NAME = "haute-osx";
+				PRODUCT_NAME = Haute;
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
 			};
@@ -561,7 +563,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D329FE601808668500A30E94 /* Build configuration list for PBXNativeTarget "haute-osx" */ = {
+		D329FE601808668500A30E94 /* Build configuration list for PBXNativeTarget "Haute" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D329FE611808668500A30E94 /* Debug */,
@@ -570,7 +572,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D329FE631808668500A30E94 /* Build configuration list for PBXNativeTarget "haute-osxTests" */ = {
+		D329FE631808668500A30E94 /* Build configuration list for PBXNativeTarget "HauteTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D329FE641808668500A30E94 /* Debug */,
@@ -579,7 +581,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D37DD39815D94AC9008A95DE /* Build configuration list for PBXProject "haute-osx" */ = {
+		D37DD39815D94AC9008A95DE /* Build configuration list for PBXProject "Haute" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D37DD3CE15D94ACA008A95DE /* Debug */,

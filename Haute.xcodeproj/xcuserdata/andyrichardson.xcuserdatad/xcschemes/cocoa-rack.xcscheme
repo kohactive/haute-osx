@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D329FE371808668400A30E94"
                BuildableName = "haute-osx.app"
-               BlueprintName = "haute-osx"
-               ReferencedContainer = "container:haute-osx.xcodeproj">
+               BlueprintName = "Haute"
+               ReferencedContainer = "container:Haute.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D329FE371808668400A30E94"
             BuildableName = "haute-osx.app"
-            BlueprintName = "haute-osx"
-            ReferencedContainer = "container:haute-osx.xcodeproj">
+            BlueprintName = "Haute"
+            ReferencedContainer = "container:Haute.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -53,8 +53,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D329FE371808668400A30E94"
             BuildableName = "haute-osx.app"
-            BlueprintName = "haute-osx"
-            ReferencedContainer = "container:haute-osx.xcodeproj">
+            BlueprintName = "Haute"
+            ReferencedContainer = "container:Haute.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -71,8 +71,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D329FE371808668400A30E94"
             BuildableName = "haute-osx.app"
-            BlueprintName = "haute-osx"
-            ReferencedContainer = "container:haute-osx.xcodeproj">
+            BlueprintName = "Haute"
+            ReferencedContainer = "container:Haute.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
