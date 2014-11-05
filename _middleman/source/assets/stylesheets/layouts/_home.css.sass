@@ -30,12 +30,17 @@ a
 .btn-outline-white
   margin-top: 25px
   padding: 15px 30px 14px
+  outline: none !important
   border-radius: 2px
   border: 2px solid white
+  background-color: transparent
   color: white
   font-size: 18px
   text-transform: uppercase
   +transition
+
+  &:focus
+    color: white
 
   &.btn-small
     padding: 8px 20px 9px
@@ -53,6 +58,7 @@ a
 .btn-download
   position: relative
   overflow: hidden
+  cursor: default
 
   &:hover
     color: white
@@ -83,7 +89,7 @@ footer
     text-align: center
 
     a
-      color: purple
+      color: rebeccapurple
 
       &:hover
         color: darken(purple, 5%)
