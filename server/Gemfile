@@ -2,7 +2,7 @@
 #     see http://gembundler.com/ for more on how to use this file
 # source (there are others but whatever)
 source 'https://rubygems.org'
-
+ruby '1.9.3', :engine => 'jruby', :engine_version => '1.7.3'
 # let's use WEBrick
 # # server
 # gem 'mongrel'
@@ -19,7 +19,8 @@ gem 'sinatra-index'
 gem 'json', '1.8.0'
 
 # sqlite
-gem 'sqlite3'
+gem 'activerecord-jdbc-adapter'
+gem 'activerecord-jdbcsqlite3-adapter'
 gem 'activerecord'
 
 gem 'coffee-script'

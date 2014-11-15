@@ -12,40 +12,16 @@
 		D329FE411808668400A30E94 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D329FE401808668400A30E94 /* main.m */; };
 		D329FE451808668400A30E94 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = D329FE431808668400A30E94 /* Credits.rtf */; };
 		D329FE481808668400A30E94 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D329FE471808668400A30E94 /* AppDelegate.m */; };
-		D329FE551808668400A30E94 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D37DD3A215D94AC9008A95DE /* Cocoa.framework */; };
 		D329FE6A18086A7400A30E94 /* server in Resources */ = {isa = PBXBuildFile; fileRef = D329FE6918086A7400A30E94 /* server */; };
 		D329FE6C18086A8500A30E94 /* scripts in Resources */ = {isa = PBXBuildFile; fileRef = D329FE6B18086A8500A30E94 /* scripts */; };
 		D329FE6E18086BC900A30E94 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D329FE6D18086BC900A30E94 /* WebKit.framework */; };
 		D329FE7318086D9600A30E94 /* app_icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = D3752001163E0A100004E31D /* app_icon.icns */; };
-		D3390F8715DB74AF005DCB78 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3390F8615DB74AF005DCB78 /* WebKit.framework */; };
-		D3752002163E0A100004E31D /* app_icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = D3752001163E0A100004E31D /* app_icon.icns */; };
-		D37DD3A315D94AC9008A95DE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D37DD3A215D94AC9008A95DE /* Cocoa.framework */; };
 		D3B013A318086ED500F860E8 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = D329FE491808668400A30E94 /* MainMenu.xib */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		D329FE561808668400A30E94 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D37DD39515D94AC9008A95DE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D329FE371808668400A30E94;
-			remoteInfo = "cocoa-rack";
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		D31A60EC15EC88BE0065A1AB /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
+		D060EEAB1A16DDC900E58197 /* Haute-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Haute-Info.plist"; sourceTree = "<group>"; };
+		D060EEAC1A16DDC900E58197 /* Haute-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Haute-Prefix.pch"; sourceTree = "<group>"; };
 		D329FE381808668400A30E94 /* Haute.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Haute.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D329FE3C1808668400A30E94 /* Haute-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Haute-Info.plist"; sourceTree = "<group>"; };
 		D329FE3E1808668400A30E94 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -55,13 +31,11 @@
 		D329FE461808668400A30E94 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D329FE471808668400A30E94 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D329FE4A1808668400A30E94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		D329FE521808668400A30E94 /* HauteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HauteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D329FE6918086A7400A30E94 /* server */ = {isa = PBXFileReference; lastKnownFileType = folder; path = server; sourceTree = "<group>"; };
 		D329FE6B18086A8500A30E94 /* scripts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = scripts; sourceTree = "<group>"; };
 		D329FE6D18086BC900A30E94 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/WebKit.framework; sourceTree = DEVELOPER_DIR; };
 		D3390F8615DB74AF005DCB78 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		D3752001163E0A100004E31D /* app_icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = app_icon.icns; sourceTree = "<group>"; };
-		D37DD39E15D94AC9008A95DE /* Haute.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Haute.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D37DD3A215D94AC9008A95DE /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		D37DD3A515D94AC9008A95DE /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		D37DD3A615D94AC9008A95DE /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -78,29 +52,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D329FE4F1808668400A30E94 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D329FE551808668400A30E94 /* Cocoa.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D37DD39B15D94AC9008A95DE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D3390F8715DB74AF005DCB78 /* WebKit.framework in Frameworks */,
-				D37DD3A315D94AC9008A95DE /* Cocoa.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		D329FE3A1808668400A30E94 /* cocoa-rack */ = {
 			isa = PBXGroup;
 			children = (
+				D060EEAB1A16DDC900E58197 /* Haute-Info.plist */,
+				D060EEAC1A16DDC900E58197 /* Haute-Prefix.pch */,
 				D329FE461808668400A30E94 /* AppDelegate.h */,
 				D329FE471808668400A30E94 /* AppDelegate.m */,
 				D329FE491808668400A30E94 /* MainMenu.xib */,
@@ -136,9 +95,7 @@
 		D37DD39F15D94AC9008A95DE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D37DD39E15D94AC9008A95DE /* Haute.app */,
 				D329FE381808668400A30E94 /* Haute.app */,
-				D329FE521808668400A30E94 /* HauteTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -184,42 +141,6 @@
 			productReference = D329FE381808668400A30E94 /* Haute.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D329FE511808668400A30E94 /* HauteTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D329FE631808668500A30E94 /* Build configuration list for PBXNativeTarget "HauteTests" */;
-			buildPhases = (
-				D329FE4E1808668400A30E94 /* Sources */,
-				D329FE4F1808668400A30E94 /* Frameworks */,
-				D329FE501808668400A30E94 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D329FE571808668400A30E94 /* PBXTargetDependency */,
-			);
-			name = HauteTests;
-			productName = "cocoa-rackTests";
-			productReference = D329FE521808668400A30E94 /* HauteTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		D37DD39D15D94AC9008A95DE /* FontPrep */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D37DD3D015D94ACA008A95DE /* Build configuration list for PBXNativeTarget "FontPrep" */;
-			buildPhases = (
-				D37DD39A15D94AC9008A95DE /* Sources */,
-				D37DD39B15D94AC9008A95DE /* Frameworks */,
-				D37DD39C15D94AC9008A95DE /* Resources */,
-				D31A60EC15EC88BE0065A1AB /* CopyFiles */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = FontPrep;
-			productName = fontx;
-			productReference = D37DD39E15D94AC9008A95DE /* Haute.app */;
-			productType = "com.apple.product-type.application";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -228,11 +149,6 @@
 			attributes = {
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "";
-				TargetAttributes = {
-					D329FE511808668400A30E94 = {
-						TestTargetID = D37DD39D15D94AC9008A95DE;
-					};
-				};
 			};
 			buildConfigurationList = D37DD39815D94AC9008A95DE /* Build configuration list for PBXProject "Haute" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -247,9 +163,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D37DD39D15D94AC9008A95DE /* FontPrep */,
 				D329FE371808668400A30E94 /* Haute */,
-				D329FE511808668400A30E94 /* HauteTests */,
 			);
 		};
 /* End PBXProject section */
@@ -268,21 +182,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D329FE501808668400A30E94 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D37DD39C15D94AC9008A95DE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D3752002163E0A100004E31D /* app_icon.icns in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -295,29 +194,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D329FE4E1808668400A30E94 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D37DD39A15D94AC9008A95DE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		D329FE571808668400A30E94 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D329FE371808668400A30E94 /* Haute */;
-			targetProxy = D329FE561808668400A30E94 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D329FE3D1808668400A30E94 /* InfoPlist.strings */ = {
@@ -402,69 +279,6 @@
 			};
 			name = Release;
 		};
-		D329FE641808668500A30E94 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/cocoa-rack.app/Contents/MacOS/cocoa-rack";
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "cocoa-rack/cocoa-rack-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				INFOPLIST_FILE = "cocoa-rackTests/cocoa-rackTests-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				PRODUCT_NAME = HauteTests;
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		D329FE651808668500A30E94 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/cocoa-rack.app/Contents/MacOS/cocoa-rack";
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				COMBINE_HIDPI_IMAGES = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "cocoa-rack/cocoa-rack-Prefix.pch";
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				INFOPLIST_FILE = "cocoa-rackTests/cocoa-rackTests-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				PRODUCT_NAME = HauteTests;
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 		D37DD3CE15D94ACA008A95DE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -518,48 +332,6 @@
 			};
 			name = Release;
 		};
-		D37DD3D115D94ACA008A95DE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN__ARC_BRIDGE_CAST_NONARC = YES;
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "fontx/FontPrep-Prefix.pch";
-				INFOPLIST_FILE = "fontx/FontPrep-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				PRODUCT_NAME = Haute;
-				SDKROOT = macosx;
-				WRAPPER_EXTENSION = app;
-			};
-			name = Debug;
-		};
-		D37DD3D215D94ACA008A95DE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN__ARC_BRIDGE_CAST_NONARC = YES;
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "fontx/FontPrep-Prefix.pch";
-				INFOPLIST_FILE = "fontx/FontPrep-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				PRODUCT_NAME = Haute;
-				SDKROOT = macosx;
-				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -572,29 +344,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D329FE631808668500A30E94 /* Build configuration list for PBXNativeTarget "HauteTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D329FE641808668500A30E94 /* Debug */,
-				D329FE651808668500A30E94 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		D37DD39815D94AC9008A95DE /* Build configuration list for PBXProject "Haute" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D37DD3CE15D94ACA008A95DE /* Debug */,
 				D37DD3CF15D94ACA008A95DE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D37DD3D015D94ACA008A95DE /* Build configuration list for PBXNativeTarget "FontPrep" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D37DD3D115D94ACA008A95DE /* Debug */,
-				D37DD3D215D94ACA008A95DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
