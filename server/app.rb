@@ -1,4 +1,4 @@
-require './vendor/bundler/setup.rb'
+require "./vendor/bundle/bundler/setup"
 
 # Requires
 require './lib/runner'

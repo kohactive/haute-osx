@@ -6,4 +6,4 @@
 #  Created by Brian M. Gonzalez on 6/11/13.
 #  Copyright (c) 2013 gnzlz. All rights reserved
 
-cd ../server && /usr/bin/java -Xmx512m -jar jruby-complete-1.7.3.jar ./app.rb $1 $2 JRUBY_OPTS=--1.9
+cd ../server && GEM_HOME=vendor/gem_home GEM_PATH=vendor/gem_home /usr/bin/java -Xmx512m -jar jruby-complete-1.7.3.jar ./app.rb $1 $2 JRUBY_OPTS=--1.9
