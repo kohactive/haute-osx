@@ -2,7 +2,7 @@
 #     see http://gembundler.com/ for more on how to use this file
 # source (there are others but whatever)
 source 'https://rubygems.org'
-ruby '1.9.3', :engine => 'jruby', :engine_version => '1.7.3'
+ruby '1.9.3', :engine => 'jruby', :engine_version => '1.7.18'
 # let's use WEBrick
 # # server
 # gem 'mongrel'
@@ -16,7 +16,7 @@ gem 'sinatra', '1.4.5'
 gem 'sinatra-asset-pipeline'
 gem 'sinatra-contrib', '1.4.2'
 gem 'sinatra-index'
-gem 'json', '1.8.0'
+gem 'json'
 
 # sqlite
 gem 'activerecord-jdbc-adapter'

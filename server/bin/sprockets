@@ -9,4 +9,4 @@
 $:.unshift File.expand_path '../../vendor/bundle', __FILE__
 
 require 'bundler/setup'
-load File.expand_path '../../vendor/bundle/jruby/1.9/gems/sprockets-2.12.2/bin/sprockets', __FILE__
+load File.expand_path '../../vendor/bundle/jruby/1.9/gems/sprockets-2.12.3/bin/sprockets', __FILE__

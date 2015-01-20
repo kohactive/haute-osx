@@ -9,4 +9,4 @@
 $:.unshift File.expand_path '../../vendor/bundle', __FILE__
 
 require 'bundler/setup'
-load File.expand_path '../../vendor/bundle/jruby/1.9/gems/sass-3.4.5/bin/scss', __FILE__
+load File.expand_path '../../vendor/bundle/jruby/1.9/gems/sass-3.4.10/bin/scss', __FILE__
