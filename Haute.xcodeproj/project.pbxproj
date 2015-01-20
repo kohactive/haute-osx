@@ -128,6 +128,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D329FE601808668500A30E94 /* Build configuration list for PBXNativeTarget "Haute" */;
 			buildPhases = (
+				C5C7D8121A6F005500B5AA2A /* ShellScript */,
 				D329FE341808668400A30E94 /* Sources */,
 				D329FE351808668400A30E94 /* Frameworks */,
 				D329FE361808668400A30E94 /* Resources */,
@@ -183,6 +184,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C5C7D8121A6F005500B5AA2A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "rm $PWD/server/haute.db; true";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D329FE341808668400A30E94 /* Sources */ = {
