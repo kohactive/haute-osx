@@ -157,15 +157,18 @@ NSString *const URL  = @"http://127.0.0.1:9999";
   NSFileManager *fileManager  = [NSFileManager defaultManager];
   
   /* If system has Ruby built in, use it. Otherwise, fireup using jruby complete. */
-  if ( [fileManager fileExistsAtPath:systemRubyPath] ){
-    [self startCocoaRackServerUsingRuby];
-  } else{
-    [self startCocoaRackServerUsingJRubyComplete];
-  }
+  //if ( [fileManager fileExistsAtPath:systemRubyPath] ){
+  //  [self startCocoaRackServerUsingRuby];
+  //} else{
+  [self startCocoaRackServerUsingJRubyComplete];
+  //}
   
 }
 
 - (void) startCocoaRackServerUsingRuby {
+  NSLog(@"ONLY JRUBY IS SUPPORTED CURRENTLY");
+  exit(-1337);
+    
   NSLog(@" ** Starting Server via system ruby");
   NSTask *runTask = [[NSTask alloc] init];
   [runTask setLaunchPath:@"/bin/sh"];
